@@ -1,0 +1,33 @@
+.level-box{
+    width: 25vw;
+    height: 25vh;
+}
+
+.level-box-container{
+    min-width: 25%;
+    min-height: 25%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-grid{
+    position: absolute;
+    border-radius: 50px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 75%;
+    height: 75%;
+    border: 7px solid black;
+    grid-template-columns: repeat(2, 50%);
+    display: grid;
+  }
+  
+  .menu-grid:hover{
+    outline: 3px solid red;
+    box-shadow: 10px 10px 0 cyan;
+  }

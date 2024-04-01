@@ -1,0 +1,4 @@
+26/03 - Faire l'intro de Kanajer (2h)
+28/03 - Faire une navbar horizontale
+29/03 - Faire un menu pour le choix des niveaux
+30/03 - Créer un premier niveau
