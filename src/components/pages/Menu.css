@@ -20,7 +20,7 @@
     bottom: 0;
     right: 0;
     margin: auto;
-    width: 75%;
+    width: 80%;
     height: 75%;
     border: 7px solid black;
     grid-template-columns: repeat(2, 50%);

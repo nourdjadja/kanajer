@@ -1,0 +1,42 @@
+.ab{
+    position: absolute;
+    border-radius: 50px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 75%;
+    height: 75%;
+    border: 7px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    font-size: calc(1.5rem + 50%);
+}
+
+.ab-container:hover{
+    outline: 3px solid red;
+    box-shadow: 10px 10px 0 cyan;
+}
+
+.ab-main-container{
+    width: 75%;
+    height: 75%;
+    grid-template-columns: repeat(2, 50%);
+    display: grid;
+  }
+
+.ab-pick-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ab-pick{
+    width: 90%;
+    height: 90%;
+}

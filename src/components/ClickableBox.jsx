@@ -17,7 +17,6 @@ export const ClickableBox = ({
                 setBoxClicked(true);
 
                 setTimeout(() => {
-                  console.log("hi");
                   handleClick();
                   setBoxClicked(false);
                 }, 1000)}}>

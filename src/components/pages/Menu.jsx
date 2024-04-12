@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { ClickableBox } from '../ClickableBox';
 import './Menu.css';
-import { TestLevel } from './TestLevel';
+import { Level } from './Level';
+import { sequenceGenerator } from '../../scripts/levels';
 
-export const Menu = ({ isShown, levelList }) => {
+export const Menu = ({ isOpen, levelList }) => {
   const [selectedBoxIndex, setSelectedBoxIndex] = useState(null);
   const [isLevelOpen, setIsLevelOpen] = useState(false);
 
@@ -35,7 +36,7 @@ export const Menu = ({ isShown, levelList }) => {
     // Faites ce que vous voulez avec les données du Timer ici
   };
 
-  if (!isShown) {
+  if (!isOpen) {
     return <></>;
   } else {
     return (
@@ -57,7 +58,7 @@ export const Menu = ({ isShown, levelList }) => {
         </div>
         
         {isLevelOpen ? 
-          <TestLevel onTimerClose={() => onTimerClose} handleDismount={() => handleCloseLevel()} difficulty={levelList[selectedBoxIndex].difficulty} isOpen={isLevelOpen}/> : <></>
+          <Level sequence={sequenceGenerator(selectedBoxIndex + 1)} onTimerClose={() => onTimerClose} handleDismount={() => handleCloseLevel()} difficulty={levelList[selectedBoxIndex].difficulty} isOpen={isLevelOpen}/> : <></>
         }
       </div>
     );

@@ -1,0 +1,27 @@
+.cde-question-container{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cde-main-container{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10%;
+    border-top: 1px solid black;
+}
+
+.cde-main-container input{
+    text-align: center;
+    font-size: calc(1rem + 50%);
+}
+
+.cde-text{
+    font-size: calc(2rem + 100%);
+}

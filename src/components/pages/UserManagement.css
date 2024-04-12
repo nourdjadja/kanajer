@@ -1,0 +1,25 @@
+.um-header{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+    height: 20vh;
+}
+
+.um-main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.score-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid black;
+}

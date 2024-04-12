@@ -1,56 +1,34 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import './Navbar.css'
-import { ScoreBoard } from './ScoreBoard'
 import { Settings } from './pages/Settings'
-import { User } from './pages/User'
+import { UserManagement } from './pages/UserManagement'
 
 export const Navbar = ({
-    handleBackToMenu,
     isShown
 }) => {
 
-    const [isScoreBoardOpen, setIsScoreBoardOpen] = useState(false);
     const [areSettingsOpen, setAreSettingsOpen] = useState(false);
-    const [isUserOpen, setIsUserOpen] = useState(false);
-
-    const handleEscapeKeyPress = (event) => {
-        if (event.key === 'Escape') {
-            setIsScoreBoardOpen(false); 
-        }
-    };
-
-    useEffect(() => {
-        document.addEventListener('keydown', handleEscapeKeyPress);
-        return () => {
-            document.removeEventListener('keydown', handleEscapeKeyPress);
-        };
-    }, []);
-
+    const [isUserManagementOpen, setIsUserManagementOpen] = useState(false);
 
     if(!isShown){
         return <></>
     } else {
         return (
-            <nav onKeyDown={handleEscapeKeyPress}>
+            <nav>
                 <div>
-                    <a style={{cursor:"pointer"}} onClick={handleBackToMenu} className='main-text'>KANAJER</a>
+                    <a className='main-text'>KANAJER</a>
                 </div>
         
                 <div>
-                    <button type="button" onClick={() => setIsUserOpen(true)}>
-                        <img src="#" alt="user"/>
+                    <button className='nb-button' type="button" onClick={() => setIsUserManagementOpen(true)}>
+                        <img src="#" alt="USMAN"/>
                     </button>
-                    <button type="button" onClick={() => setAreSettingsOpen(true)}>
-                        <img src="#" alt="settings"/>
+                    <button className='nb-button' type="button" onClick={() => setAreSettingsOpen(true)}>
+                        <img src="#" alt="STNGS"/>
                     </button>
-        
-                    <button type="button" onClick={() => setIsScoreBoardOpen(true)}>
-                        <img src="#" alt="score"/>
-                    </button> 
                 
-                    <ScoreBoard handleDismount={() => setIsScoreBoardOpen(false)} isOpen={isScoreBoardOpen}/> 
                     <Settings handleDismount={() => setAreSettingsOpen(false)} isOpen={areSettingsOpen}/> 
-                    <User handleDismount={() => setIsUserOpen(false)} isOpen={isUserOpen}/>
+                    <UserManagement handleDismount={() => setIsUserManagementOpen(false)} isOpen={isUserManagementOpen}/>
                 </div>
             </nav>
           )

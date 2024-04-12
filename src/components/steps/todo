@@ -1,0 +1,23 @@
+0 = kana to romaji
+
+step0.1 :
+    4 boites avec des romaji
+    un kana en haut
+    un romaji qui correspond au kana
+
+step0.2 : 
+    4 boites avec des kanas
+    un romaji en haut
+    un kana qui correspond au romaji
+
+step1.1 :
+    1 kana
+    1 input en romaji qui doit correspondre
+
+step2.1 :
+    1 kanaword
+    1 input en romaji qui doit correspondre
+
+step3.1
+    1 kanaword
+    1 input en français qui doit correspondre
