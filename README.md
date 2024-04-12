@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# KANAJER 📚🇯🇵
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+KANAJER est un projet open-source conçu pour aider les utilisateurs à apprendre les 96 kanas du japonais, y compris les hiraganas, les katakanas et leurs déclinaisons. En plus de cela, l'application propose deux niveaux supplémentaires ("KANA JUGGLER" et "KANAJER !") où les utilisateurs peuvent se familiariser avec une centaine de mots japonais du quotidien écrits en hiragana ainsi que leur traduction en français. L'application est développée en utilisant ReactDOM JavaScript pour le frontend et utilise un backend basé sur SUPABASE. KANAJER est entièrement gratuit et ne contient aucune publicité. ✨
 
-## Available Scripts
+## Fonctionnalités
 
-In the project directory, you can run:
+- **Apprentissage des kanas**: KANAJER propose une interface conviviale permettant aux utilisateurs d'apprendre et de pratiquer les kanas japonais de manière interactive.
 
-### `npm start`
+- **Niveaux supplémentaires**: En plus des kanas, les utilisateurs peuvent accéder à deux niveaux supplémentaires ("KANA JUGGLER" et "KANAJER !") pour se familiariser avec les mots japonais du quotidien écrits en hiragana ainsi que leur traduction en français.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Navigation par catégories**: Les utilisateurs peuvent naviguer facilement entre les différents types de kana, y compris les hiraganas, les katakanas et leurs variations.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Suivi de la progression**: KANAJER offre des outils pour suivre la progression de l'utilisateur et identifier les domaines où des améliorations sont nécessaires.
 
-### `npm test`
+- **Accès depuis le navigateur**: L'application KANAJER est accessible via un navigateur web, ce qui permet aux utilisateurs de l'utiliser sur une variété d'appareils sans avoir besoin de télécharger d'application supplémentaire. 🌐
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies utilisées
 
-### `npm run build`
+- **Frontend**: ReactDOM JavaScript
+- **Backend**: SUPABASE
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Comment utiliser
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Pour utiliser KANAJER, suivez ces étapes simples :
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clonez ce dépôt sur votre machine locale.
+2. Installez les dépendances en exécutant `npm install`.
+3. Démarrez l'application en exécutant `npm start`.
+4. Accédez à l'application dans votre navigateur en ouvrant l'URL [http://localhost:3000](http://localhost:3000).
 
-### `npm run eject`
+## Contribuer
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Nous accueillons les contributions de la communauté! Si vous souhaitez contribuer à KANAJER, veuillez consulter notre guide de contribution pour obtenir des instructions détaillées.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Licence
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+KANAJER est distribué sous la licence MIT. Veuillez consulter le fichier `LICENSE` pour plus d'informations.
