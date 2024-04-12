@@ -19,7 +19,7 @@ KANAJER est un projet open-source conçu pour aider les utilisateurs à apprendr
 
 ## Comment utiliser
 
-Pour utiliser KANAJER, suivez ces étapes simples :
+Pour modifier KANAJER, suivez ces étapes simples :
 
 1. Clonez ce dépôt sur votre machine locale.
 2. Installez les dépendances en exécutant `npm install`.
