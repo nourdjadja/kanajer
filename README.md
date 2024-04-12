@@ -6,13 +6,11 @@ KANAJER est un projet open-source conçu pour aider les utilisateurs à apprendr
 
 - **Apprentissage des kanas**: KANAJER propose une interface conviviale permettant aux utilisateurs d'apprendre et de pratiquer les kanas japonais de manière interactive.
 
-- **Niveaux supplémentaires**: En plus des kanas, les utilisateurs peuvent accéder à deux niveaux supplémentaires ("KANA JUGGLER" et "KANAJER !") pour se familiariser avec les mots japonais du quotidien écrits en hiragana ainsi que leur traduction en français.
+- **Niveaux supplémentaires**: En plus des kanas, les utilisateurs peuvent accéder à deux niveaux supplémentaires ("KANA JUGGLER" et "KANAJER !") pour se familiariser avec les mots japonais du quotidien écrits en hiragana ainsi que leur traduction en français. 🍛
 
-- **Navigation par catégories**: Les utilisateurs peuvent naviguer facilement entre les différents types de kana, y compris les hiraganas, les katakanas et leurs variations.
+- **Suivi de la progression**: Observez l'évolution de vos scores par niveau ! 🍣
 
-- **Suivi de la progression**: KANAJER offre des outils pour suivre la progression de l'utilisateur et identifier les domaines où des améliorations sont nécessaires.
-
-- **Accès depuis le navigateur**: L'application KANAJER est accessible via un navigateur web, ce qui permet aux utilisateurs de l'utiliser sur une variété d'appareils sans avoir besoin de télécharger d'application supplémentaire. 🌐
+- **Accès depuis le navigateur**: L'application KANAJER est accessible via navigateur web, ce qui permet aux utilisateurs de l'utiliser sur une variété d'appareils sans avoir besoin de télécharger d'application supplémentaire. 🌐
 
 ## Technologies utilisées
 
