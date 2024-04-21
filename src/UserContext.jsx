@@ -3,17 +3,19 @@ import { useState, useContext, createContext } from 'react';
 export const UserContext = createContext(undefined);
 
 export const UserContextProvider = ({ children }) => {
-    const [variables, setVariables] = useState({
+    const [userVar, setUserVar] = useState({
         username:undefined,
-        scores:undefined
+        id:undefined,
+        scores:undefined,
+        isLoggedIn:false,
     });
   
-    const updateVariables = (newVariables) => {
-      setVariables(newVariables);
+    const updateUserVar = (newVariables) => {
+      setUserVar(newVariables);
     };
   
     return (
-      <UserContext.Provider value={{ variables, updateVariables }}>
+      <UserContext.Provider value={{ userVar, updateUserVar }}>
         {children}
       </UserContext.Provider>
     );

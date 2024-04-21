@@ -4,14 +4,14 @@ import './AB.css'
 import { useState } from 'react'
 
 export const B = ({
-    data,
+    Bdata,
     onWin,
     onPass,
     kanaType
 }) => {
 
     const rng = generateRNG(4, 0);
-    let rightAnswer = data[rng]
+    let rightAnswer = Bdata[rng]
 
     const [showMistake, setShowMistake] = useState(false)
 
@@ -19,15 +19,15 @@ export const B = ({
 
     const checkAnswer = (answer) => {
         if(answer === rightAnswer){
-            rightAnswer = null;
             onWin()
+            rightAnswer = null;
         } else {
             console.log('wrong answer')
             setShowMistake(true)
             setTimeout(() => {
                 onPass()
                 setShowMistake(false)
-            }, 5000);
+            }, 2500);
         }
     }
 
@@ -37,7 +37,7 @@ export const B = ({
     <div className='ab'>
         <div className="ab-question-container">
             <p className="main-text">
-                {showMistake ? rightAnswer[2] : rightAnswer[kanaType]}
+                {showMistake ? <>{rightAnswer[2]} -{'>'} {rightAnswer[kanaType]}</> : rightAnswer[kanaType]}
             </p>
         </div>
 
@@ -46,30 +46,32 @@ export const B = ({
             <div className="ab-main-container">
 
             <div className="ab-pick-container">
-                <ClickableBox optionClasses={"ab-pick"} handleClick={() => checkAnswer(data[0])}>
-                    {data[0][2]}
+                <ClickableBox soundPlayed={'/selectAnswer.mp3'} optionClasses={"ab-pick"} handleClick={() => checkAnswer(Bdata[0])}>
+                    {Bdata[0][2]}
                 </ClickableBox>
             </div>
 
             <div className="ab-pick-container">
-                <ClickableBox optionClasses={"ab-pick"} handleClick={() => checkAnswer(data[1])}>
-                    {data[1][2]}
+                <ClickableBox soundPlayed={'/selectAnswer.mp3'} optionClasses={"ab-pick"} handleClick={() => checkAnswer(Bdata[1])}>
+                    {Bdata[1][2]}
                 </ClickableBox>
             </div>
 
             <div className="ab-pick-container">
-                <ClickableBox optionClasses={"ab-pick"} handleClick={() => checkAnswer(data[2])}>
-                    {data[2][2]}
+                <ClickableBox soundPlayed={'/selectAnswer.mp3'} optionClasses={"ab-pick"} handleClick={() => checkAnswer(Bdata[2])}>
+                    {Bdata[2][2]}
                 </ClickableBox>
             </div>
 
             <div className="ab-pick-container">
-                <ClickableBox optionClasses={"ab-pick"} handleClick={() => checkAnswer(data[3])}>
-                    {data[3][2]}
+                <ClickableBox soundPlayed={'/selectAnswer.mp3'} optionClasses={"ab-pick"} handleClick={() => checkAnswer(Bdata[3])}>
+                    {Bdata[3][2]}
                 </ClickableBox>
             </div>
 
         </div>}
+
+
     </div>
   )
 }

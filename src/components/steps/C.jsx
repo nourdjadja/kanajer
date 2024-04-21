@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './CDE.css'
 
 export const C = ({
-    data,
+    Cdata,
     onWin,
     kanaType,
     onPass
@@ -20,7 +20,7 @@ export const C = ({
 
     const checkAnswer = () => {
 
-        if(answer === data[2]){
+        if(answer.toLowerCase() == Cdata[2]){
             onWin()
         } else {
             console.log('wrong answer')
@@ -28,7 +28,7 @@ export const C = ({
             setTimeout(() => {
                 onPass()
                 setShowMistake(false)
-            }, 5000);
+            }, 2500);
         }
     }
 
@@ -39,7 +39,7 @@ export const C = ({
     <div className='big-container'>
         <div className="cde-question-container">
             <p className="cde-text">
-                {showMistake ? data[2] : data[kanaType]}
+                {showMistake ? <>{Cdata[kanaType]} -{'>'} {Cdata[2]}</> : Cdata[kanaType]}
             </p>
         </div>
 
@@ -48,6 +48,10 @@ export const C = ({
             <input onChange={handleInputChange} id='answer' type='text' placeholder='Your Romaji Here'/>
             <button onClick={checkAnswer}>checkAnswer</button>
         </div>}
+
+        <button onClick={onPass} className="step-pass relative-bottom-right-pass">
+            Pass
+        </button>
     </div>
   )
 }

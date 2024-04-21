@@ -22,4 +22,14 @@ nav div{
     width: 50px;
     height: 50%;
     margin: 10px;
+    display: flex;
+    padding: 5px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.nb-button img{
+    max-width: 50px;
+    max-height: 50px;
 }

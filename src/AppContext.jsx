@@ -3,18 +3,17 @@ import React, { createContext, useContext, useState } from 'react';
 export const AppContext = createContext(undefined);
 
 export const AppContextProvider = ({ children }) => {
-    const [variables, setVariables] = useState({
-      musicVolume: 0.5,
+    const [appVar, setAppVar] = useState({
       effectsVolume: 0.5,
-      timerValue: null,
+      isLoggedIn:undefined
     });
   
-    const updateVariables = (newVariables) => {
-      setVariables(newVariables);
+    const updateAppVar = (newVariables) => {
+      setAppVar(newVariables);
     };
   
     return (
-      <AppContext.Provider value={{ variables, updateVariables }}>
+      <AppContext.Provider value={{ appVar , updateAppVar }}>
         {children}
       </AppContext.Provider>
     );

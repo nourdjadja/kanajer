@@ -50,19 +50,19 @@ export const sequenceGenerator = (difficulty) => {
     for(let i = 0; i < length; i++){
         switch (difficulty) {
             case 1:
-                randomStep = generateRNG(3, 0) - generateRNG(1, 0.1)
+                randomStep = generateRNG(2, 0) - generateRNG(2, 0.2)
                 break;
 
             case 2:
-                randomStep = generateRNG(3, 0) - generateRNG(1, 0.1)
+                randomStep = generateRNG(3, 0) - generateRNG(2, 0.2)
                 break;
 
             case 3:
-                randomStep = generateRNG(4, 0) - generateRNG(1, 0.2)
+                randomStep = generateRNG(4, 0) - generateRNG(2, 0.2)
                 break;
             
             case 4:
-                randomStep = generateRNG(5, 0) - generateRNG(1, 0.3)
+                randomStep = generateRNG(5, 0) - generateRNG(2, 0.3)
                 break;
         }
 

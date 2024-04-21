@@ -4,7 +4,11 @@ export function calculateTotalExp(scores) {
     if (scores && Array.isArray(scores.scores)) {
         const levelData = scores.scores;
         for (const data of levelData) {
-            totalExp += data[0][1];
+            if(data[0]){
+                totalExp += data[0][1];
+            } else {
+                totalExp += 0;
+            }
         }
     } else {
         console.error("Erreur: scores n'est pas dans le format attendu.");
@@ -23,6 +27,5 @@ export function masteryCalculator(exp){
         factor++;
     }
 
-    console.log(mastery)
     return mastery;
 }

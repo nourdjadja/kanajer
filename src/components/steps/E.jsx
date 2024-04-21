@@ -2,25 +2,32 @@ import { useState } from 'react';
 import './CDE.css'
 
 export const E = ({
-    data,
-    onWin
+    Edata,
+    onWin,
+    onPass
 }) => {
 
-  const [userAnswer, setUserAnswer] = useState('')
-  console.log(data)
+  const [answer, setAnswer] = useState('')
+  const [showMistake, setShowMistake] = useState(false)
+
+  console.log(Edata)
 
     /* -------------------------------------------------------- */
 
     const handleInputChange = (e) => {
-        setUserAnswer(e.target.value);
+        setAnswer(e.target.value);
     };
 
     const checkAnswer = () => {
-
-        if(userAnswer === data[2]){
+        if(answer.toLowerCase() == Edata[2]){
             onWin()
         } else {
-            console.log('wrong userAnswer')
+            console.log('wrong answer')
+            setShowMistake(true)
+            setTimeout(() => {
+                onPass()
+                setShowMistake(false)
+            }, 2500);
         }
     }
 
@@ -30,7 +37,7 @@ export const E = ({
     <div className='big-container'>
         <div className="cde-question-container">
             <p className="cde-text">
-            {showMistake ? data[2] : data[0]}
+            {showMistake ? <>{Edata[0]} -{'>'} {Edata[2]}</> : Edata[0]}
             </p>
         </div>
 
@@ -40,6 +47,10 @@ export const E = ({
 
             <button onClick={checkAnswer}>checkAnswer</button>
         </div>}
+
+        <button onClick={onPass} className="step-pass relative-bottom-right-pass">
+            Pass
+        </button>
     </div>
   )
 }

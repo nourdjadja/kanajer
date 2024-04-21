@@ -45,6 +45,7 @@ export const Menu = ({ isOpen, levelList }) => {
           {levelList.map((level, index) => (
             <div className="level-box-container" key={index}>
               <ClickableBox
+                soundPlayed={'audio/selectLevel.mp3'}
                 handleClick={() => handleClick(index)}
                 optionClasses={selectedBoxIndex === index ? 'level-box selected' : 'level-box'}
                 key={index}

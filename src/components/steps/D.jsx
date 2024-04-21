@@ -2,14 +2,15 @@ import { useState } from 'react';
 import './CDE.css'
 
 export const D = ({
-    data,
+    Ddata,
     onWin,
+    onPass
 }) => {
 
   const [answer, setAnswer] = useState('')
   const [showMistake, setShowMistake] = useState(false)
 
-  console.log(data)
+  console.log(Ddata)
 
     /* -------------------------------------------------------- */
 
@@ -18,7 +19,7 @@ export const D = ({
     };
 
     const checkAnswer = () => {
-        if(answer == data[1]){
+        if(answer.toLowerCase() == Ddata[1]){
             onWin()
         } else {
             console.log('wrong answer')
@@ -26,7 +27,7 @@ export const D = ({
             setTimeout(() => {
                 onPass()
                 setShowMistake(false)
-            }, 5000);
+            }, 2500);
         }
     }
 
@@ -36,7 +37,7 @@ export const D = ({
     <div className='big-container'>
         <div className="cde-question-container">
             <p className="cde-text">
-                {showMistake ? data[1] : data[0]}
+            {showMistake ? <>{Ddata[0]} -{'>'} {Ddata[1]}</> : Ddata[0]}
             </p>
         </div>
 
@@ -46,6 +47,10 @@ export const D = ({
 
             <button onClick={checkAnswer}>checkAnswer</button>
         </div>}
+
+        <button onClick={onPass} className="step-pass relative-bottom-right-pass">
+            Pass
+        </button>
     </div>
   )
 }

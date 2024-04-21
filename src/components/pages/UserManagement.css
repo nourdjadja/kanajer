@@ -23,3 +23,47 @@
     justify-content: space-around;
     border-bottom: 1px solid black;
 }
+
+.data-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+    text-align: center;
+    gap: 5%;
+}
+
+.data{
+    font-size: calc(1vw + 0.75rem);
+}
+
+.a{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid black;
+}
+
+.b{
+    width: 25%;
+    border-right: 1px solid black;
+}
+
+.c{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

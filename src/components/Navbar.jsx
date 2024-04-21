@@ -4,7 +4,8 @@ import { Settings } from './pages/Settings'
 import { UserManagement } from './pages/UserManagement'
 
 export const Navbar = ({
-    isShown
+    isShown,
+    onLogout 
 }) => {
 
     const [areSettingsOpen, setAreSettingsOpen] = useState(false);
@@ -21,10 +22,13 @@ export const Navbar = ({
         
                 <div>
                     <button className='nb-button' type="button" onClick={() => setIsUserManagementOpen(true)}>
-                        <img src="#" alt="USMAN"/>
+                        <img src="image/timer.svg"/>
                     </button>
                     <button className='nb-button' type="button" onClick={() => setAreSettingsOpen(true)}>
-                        <img src="#" alt="STNGS"/>
+                        <img src="image/settings.svg" alt="STNGS"/>
+                    </button>
+                    <button className='nb-button' type="button" onClick={onLogout}>
+                        <img src="image/logout.svg" alt="OUT"/>
                     </button>
                 
                     <Settings handleDismount={() => setAreSettingsOpen(false)} isOpen={areSettingsOpen}/> 
