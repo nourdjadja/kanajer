@@ -46,7 +46,9 @@ export const C = ({
 {showMistake ? <></> :
         <div className="cde-main-container">
             <input onChange={handleInputChange} id='answer' type='text' placeholder='Your Romaji Here'/>
-            <button onClick={checkAnswer}>checkAnswer</button>
+            <button className='check-container' onClick={checkAnswer}>
+                <img className='check' src="/image/check.svg" alt="check"/>
+            </button>
         </div>}
 
         <button onClick={onPass} className="step-pass relative-bottom-right-pass">

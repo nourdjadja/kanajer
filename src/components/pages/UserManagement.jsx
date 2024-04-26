@@ -1,7 +1,7 @@
 import { useUserContext } from '../../UserContext'
 import { calculateTotalExp, masteryCalculator } from '../../scripts/levelCalculator'
 import './UserManagement.css'
-import { getBestTime } from '../../scripts/levels'
+import { getBestTime, getBestTimeCompleteData } from '../../scripts/levels'
 
 
 export const UserManagement = ({
@@ -44,9 +44,10 @@ export const UserManagement = ({
             <p className='a smallest-text'>Kana Starter !</p>
             {!getBestTime(userVar.scores.scores[0]) ? <p className='d smallest-test'>Not yet done!</p> : (
               <>             
-                <div className="b data-container">
-                  <p className='data'>{userVar.scores.scores[0][1][1]}</p>
-                  <p className='data'>{userVar.scores.scores[0][1][2]}</p>
+              {/* Alors ici, on a un léger problème qui rend le code inélégant. En fait, on cherche userVar.scores.scores[idLevel][idMeilleurTemps][1 et 2] mais pour avoir idMeilleurTemps faut vraiment écrire un truc moche de fou... j'pourrais faire autrement mais j'ai un peu la flemme alors je verrais... */}
+                <div className="b data-container"> 
+                  <p className='data'>{getBestTimeCompleteData(userVar.scores.scores[0])[1]}</p>
+                  <p className='data'>{getBestTimeCompleteData(userVar.scores.scores[0])[2]}</p>
                 </div>
 
                 <p className='c small-text'>{getBestTime(userVar.scores.scores[0])}ms</p>
@@ -59,8 +60,8 @@ export const UserManagement = ({
             {!getBestTime(userVar.scores.scores[1]) ? <p className='d smallest-test'>Not yet done!</p> : (
               <>             
                 <div className="b data-container">
-                  <p className='data'>{userVar.scores.scores[1][1][1]}</p>
-                  <p className='data'>{userVar.scores.scores[1][1][2]}</p>
+                  <p className='data'>{getBestTimeCompleteData(userVar.scores.scores[1])[1]}</p>
+                  <p className='data'>{getBestTimeCompleteData(userVar.scores.scores[1])[2]}</p>
                 </div>
                 <p className='c small-text'>{getBestTime(userVar.scores.scores[1])}ms</p>
               </>
@@ -72,8 +73,8 @@ export const UserManagement = ({
             {!getBestTime(userVar.scores.scores[2]) ? <p className='d smallest-test'>Not yet done!</p> : (
               <>   
                 <div className="b data-container">
-                  <p className='data'>{userVar.scores.scores[2][1][1]}</p>
-                  <p className='data'>{userVar.scores.scores[2][1][2]}</p>
+                  <p className='data'>{getBestTimeCompleteData(userVar.scores.scores[2])[1]}</p>
+                  <p className='data'>{getBestTimeCompleteData(userVar.scores.scores[2])[2]}</p>
                 </div>
                 <p className='c small-text'>{getBestTime(userVar.scores.scores[2])}ms</p>
               </>
@@ -83,10 +84,10 @@ export const UserManagement = ({
           <div className="score-container">
             <p className='a smallest-text'>Kanajer !</p>
             {!getBestTime(userVar.scores.scores[3]) ? <p className='d smallest-test'>Not yet done!</p> : (
-              <>             
+              <>
                 <div className="b data-container">
-                  <p className='data'>{userVar.scores.scores[3][1][1]}</p>
-                  <p className='data'>{userVar.scores.scores[3][1][2]}</p>
+                  <p className='data'>{getBestTimeCompleteData(userVar.scores.scores[3])[1]}</p>
+                  <p className='data'>{getBestTimeCompleteData(userVar.scores.scores[3])[2]}</p>
                 </div>
                 <p className='c small-text'>{getBestTime(userVar.scores.scores[3])}ms</p>
               </>

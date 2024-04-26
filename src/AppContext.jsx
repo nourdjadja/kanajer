@@ -5,6 +5,7 @@ export const AppContext = createContext(undefined);
 export const AppContextProvider = ({ children }) => {
     const [appVar, setAppVar] = useState({
       effectsVolume: 0.5,
+      voicesVolume:1,
       isLoggedIn:undefined
     });
   

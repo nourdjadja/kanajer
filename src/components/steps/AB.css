@@ -39,4 +39,5 @@
 .ab-pick{
     width: 90%;
     height: 90%;
+    font-size: calc(1.5rem + 100%);
 }

@@ -81,6 +81,25 @@ export const sequenceGenerator = (difficulty) => {
     return sequence
 }
 
+export const getBestTimeCompleteData = (levelAttemptList) => {
+    if (!Array.isArray(levelAttemptList) || levelAttemptList.length === 0) {
+        return null; 
+    }
+
+    let bestTime = levelAttemptList[0][0]; 
+    let bestAttempt = levelAttemptList[0]
+
+    for (let i = 1; i < levelAttemptList.length; i++) {
+        const attemptTime = levelAttemptList[i][0];
+        const attempt = levelAttemptList[i]
+        if (attemptTime < bestTime) {
+            bestAttempt = attempt
+        }
+    }
+
+    return bestAttempt;
+};
+
 export const getBestTime = (levelAttemptList) => {
     if (!Array.isArray(levelAttemptList) || levelAttemptList.length === 0) {
         return null; 
@@ -89,9 +108,9 @@ export const getBestTime = (levelAttemptList) => {
     let bestTime = levelAttemptList[0][0]; 
 
     for (let i = 1; i < levelAttemptList.length; i++) {
-        const attempt = levelAttemptList[i][0];
-        if (attempt < bestTime) {
-            bestTime = attempt; 
+        const attemptTime = levelAttemptList[i][0];
+        if (attemptTime < bestTime) {
+            bestTime = attemptTime; 
         }
     }
 

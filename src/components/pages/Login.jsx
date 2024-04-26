@@ -55,6 +55,7 @@ export const Login = ({
         let pwd = pwdInput;
     
         setPassWordError(false)
+        setUsernameLengthError(false)
         setUsernameAlreadyUsed(false)
 
         if(username.length < 4 || username.length > 15){
@@ -157,7 +158,16 @@ export const Login = ({
                     {usernameLengthError ? <p style={{color:'red'}}>Username should be 4-15 characters long.</p>  : <></>}
                     {passwordError ? <p style={{color:'red'}}>Your password should contain 12 characters, an UPPERCASE, a lowercase, a digit and a symbol from this list : ! @ # $ % ^ & * _</p>  : <></>}
                 </form>
-                <button className='absolute-left-return' onClick={() => setRegisterOpen(false)}>BACK</button>
+                <button style={{
+                    display:"flex",
+                    justifyContent:"center",
+                    alignItems:"center",
+                    border:"none"
+                }} className='absolute-left-return' onClick={() => setRegisterOpen(false)}>
+                    <img src="/image/toLeft.svg" style={{
+                        width:"50px"
+                    }} alt="Back" srcset="" />
+                </button>
                     <div className="legals">
                         <h3 className="smallest-text" style={{textDecoration:'underline', cursor:'pointer'}} onClick={() => setTOSOpen(true)}>Terms of Services</h3>
                     </div></>
