@@ -1,13 +1,46 @@
-Kanajer (stylisé KANAJER!) est une application web permettant de réviser les bases de la langue japonaise sans publicité, gratuitement et de façon accessible. L’interface est épurée et rendue “responsive” et claire avec une colorimétrie en noir et  blanc pour les éléments statiques, et en rouge et cyan pour les éléments dynamiques. Au travers de 4 niveaux de difficulté, Kanajer vous propose de réviser les Hiraganas, les Katakanas, ainsi que près d’une centaine de mots écrits en hiragana avec leur traduction vers l’anglais.
-	Kanajer n’est pas un outil d’apprentissage, mais bel et bien d’exercice. Son utilisation présuppose que ses utilisateurs ont déjà lu au moins une fois un kana japonais.
+🎌 KANAJER! 🎌
 
+Welcome to KANAJER! – your ad-free, user-friendly web app for brushing up on the basics of the Japanese language! 🚀 Whether you're on your computer, tablet, or phone, KANAJER! offers a sleek, responsive interface that’s a pleasure to use. Our minimalist design uses black and white for static elements and red and cyan for dynamic ones, creating a clear and engaging learning environment.
 
-## Comment lancer KANAJER! ?
+With 4 levels of difficulty, KANAJER! helps you review Hiragana, Katakana, and nearly a hundred words written in Hiragana, complete with their English translations. Note: This is a practice tool, not a learning tool, so it’s best if you’ve already encountered Japanese kana before.
+✨ Features
 
-- Téléchargez NodeJS (https://nodejs.org/en)
-- Récupérez le contenu de ce dépôt GITLAB.
-- Lancez un terminal NodeJS et placez vous dans le dossier de KANAJER! via la commande "cd" (si vous avez réussi à cette étape, vous devriez pouvoir écrire "ls" et constater que le terminal vous retourne le même contenu que ce dépôt GITLAB).
-- Depuis cet emplacement (et toujours via le terminal NodeJS) executez "npm install" (une fois cette étape terminée, vous devriez voir "node_modules" dans le dossier de KANAJER! ou en executant "ls" une nouvelle fois)
-- Enfin, executez la commande "npm run dev" pour lancer un environnement Javascript local et accéder à l'application.
+    🚫 Ad-Free: Enjoy an uninterrupted experience.
+    📱 Responsive Design: Perfect on any device.
+    🎯 Difficulty Levels: Tailor your practice to your skill level.
+    📝 Hiragana & Katakana Practice: Review essential Japanese characters and words.
 
-Pour plus d'informations sur KANAJER!, se référer à "Cahier des charges techniques_KANAJER.pdf".
+🚀 Getting Started
+
+Ready to dive in? Follow these simple steps:
+
+    Download NodeJS: NodeJS Official Website
+    Clone the Repository: Grab the code from this GitLab repository.
+    Navigate to the Project Directory: Open a NodeJS terminal and use cd to get into the KANAJER! folder.
+
+    sh
+
+cd path/to/KANAJER!
+
+Confirm you're in the right place by running ls and checking the contents.
+Install Dependencies: Run the following command to install everything you need:
+
+sh
+
+npm install
+
+You should see a node_modules folder once it's done.
+Run the Development Server: Start up your local server with:
+
+sh
+
+    npm run dev
+
+    You're all set! The application should now be accessible locally.
+
+🌐 Deployment
+
+Check out KANAJER! online at KANAJER! on Vercel.
+📄 More Information
+
+For more details, please refer to the original "Cahier des charges techniques_KANAJER.pdf".
