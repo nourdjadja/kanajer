@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react"
+/* eslint-disable react/prop-types */
+import { useState } from "react"
 import "./Login.css"
 import { getUserDataFromDB, sendRegisterDataToDB } from "../../scripts/connect";
 import { CGU } from "./CGU";
@@ -73,7 +74,7 @@ export const Login = ({
         if (userData){
             setUsernameAlreadyUsed(true)
             return false;
-        };
+        }
 
         sendRegisterDataToDB(username, pwd);
         setWaitPlease(true)
@@ -166,7 +167,7 @@ export const Login = ({
                 }} className='absolute-left-return' onClick={() => setRegisterOpen(false)}>
                     <img src="/image/toLeft.svg" style={{
                         width:"50px"
-                    }} alt="Back" srcset="" />
+                    }} alt="Back" srcSet="" />
                 </button>
                     <div className="legals">
                         <h3 className="smallest-text" style={{textDecoration:'underline', cursor:'pointer'}} onClick={() => setTOSOpen(true)}>Terms of Services</h3>

@@ -20,7 +20,7 @@ function App() {
             const userData = JSON.parse(userDataString);
             updateUserVar(userData);
         }
-    }, []);
+    }, [updateUserVar]);
 
     const handleLogin = async (usernameInput, pwdInput) => {
         const hashedPwd = hashPassword(pwdInput);

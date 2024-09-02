@@ -1,5 +1,9 @@
 /*
     Ne me demandez pas pourquoi, j'avais vraiment envie que cette belle fonction soit sur une seule ligne.
+    C'est celle qui permet de générer des "choices" en fonction des niveaux.
+    En y repensant, j'aurais clairement pu faire une fonction générique récursive en prenant en input un "maxDifficulty" et la quantité de numéros possibles par level...
+    Mais j'avais pas eu l'idée...
+    Et puis c'est overkill à vrai dire.
 */
 
 import { generateKanaData, generateRNG } from "./generateRng";

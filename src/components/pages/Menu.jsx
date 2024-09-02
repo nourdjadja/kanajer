@@ -33,7 +33,7 @@ export const Menu = ({ isOpen, levelList }) => {
   
   const onTimerClose = (data) => {
     console.log("Données du Timer :", data);
-    // Faites ce que vous voulez avec les données du Timer ici
+    // UTILISER LES DONNEES DU TIMER ?
   };
 
   if (!isOpen) {
